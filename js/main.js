@@ -128,4 +128,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000); // Change image every 5 seconds
     }
 
+    // 8. Language Toggle Logic
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+        let currentLang = 'en';
+
+        // Function to update content
+        const updateLanguage = (lang) => {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    // Check if we should use innerHTML or textContent
+                    // For titles with <br> or <span> we use innerHTML
+                    if (translations[lang][key].includes('<') || el.tagName === 'DIV') {
+                        el.innerHTML = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update button text
+            langBtn.textContent = lang === 'en' ? 'EN / ES' : 'ES / EN';
+            
+            // Update HTML lang attribute
+            document.documentElement.setAttribute('lang', lang);
+        };
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            updateLanguage(currentLang);
+            localStorage.setItem('preferredLang', currentLang);
+        });
+
+        // Check for saved preference
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang) {
+            currentLang = savedLang;
+            updateLanguage(currentLang);
+        }
+    }
+
 });

@@ -26,13 +26,15 @@
             </div>
             
             <ul class="nav-links" id="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#contact" class="btn btn-primary-outline">Contact</a></li>
+                <li><a href="#services" data-i18n="nav-services">Services</a></li>
+                <li><a href="#process" data-i18n="nav-process">Process</a></li>
+                <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
+                <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+                <li><a href="#contact" class="btn btn-primary-outline" data-i18n="nav-contact">Contact</a></li>
             </ul>
 
             <div class="nav-actions" style="display: flex; align-items: center; gap: 0.5rem;">
+                <button id="lang-toggle" aria-label="Toggle Language" style="background: none; border: 1px solid var(--color-border-strong); color: var(--color-text-main); cursor: pointer; padding: 0.4rem 0.8rem; border-radius: var(--radius-sm); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; transition: var(--transition);">EN / ES</button>
                 <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" style="background: none; border: none; color: var(--color-text-main); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center; transition: var(--transition);">
                     <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                     <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
@@ -56,11 +58,24 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
             <img src="logo.png" alt="A&A Spray Foam Inc. Logo" class="hero-main-logo">
-            <h1 class="hero-title">Premium Spray Foam Insulation<br>in <span>Jacksonville, FL</span></h1>
-            <p class="hero-subtitle">Lower your energy bills, improve indoor comfort, and protect your property with A&A Spray Foam Inc. Professional, fast, and reliable commercial and residential insulation services.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
-                <a href="#contact" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us Now</a>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1.5rem; line-height: 1.1; font-weight: 900;" data-i18n="hero-title">Jacksonville Spray Foam Insulation<br><span style="color: var(--color-mustard);">Built for Florida Heat & Humidity</span></h1>
+            <p class="hero-subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2.5rem auto; font-weight: 400; line-height: 1.6;" data-i18n="hero-subtitle">Seal your home against Florida heat, humidity, and high energy bills with clean, professional spray foam insulation.</p>
+            <div class="hero-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero-btn-estimate">Get a Free Estimate</a>
+                <a href="tel:+19045125644" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span data-i18n="hero-btn-call">Call Now</span></a>
+                <a href="https://wa.me/19045125644" class="btn btn-primary" style="background-color: #25D366; border-color: #25D366; color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.4L3 21"></path><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path></svg> <span data-i18n="hero-btn-whatsapp">Text Us on WhatsApp</span></a>
+            </div>
+            
+            <div class="trust-bar" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; padding: 1rem 2rem; display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: center; font-size: 0.95rem; font-weight: 600;">
+                <span style="display:flex; align-items:center; gap:0.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="trust-local">Local Jacksonville Service</span></span>
+                <span style="color: var(--color-mustard); opacity: 0.5;">•</span>
+                <span style="display:flex; align-items:center; gap:0.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="trust-estimates">Free Estimates</span></span>
+                <span style="color: var(--color-mustard); opacity: 0.5;">•</span>
+                <span style="display:flex; align-items:center; gap:0.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="trust-bilingual">English & Spanish</span></span>
+                <span style="color: var(--color-mustard); opacity: 0.5;">•</span>
+                <span style="display:flex; align-items:center; gap:0.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="trust-clean">Clean Installation</span></span>
+                <span style="color: var(--color-mustard); opacity: 0.5;">•</span>
+                <span style="display:flex; align-items:center; gap:0.3rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-i18n="trust-honest">Honest Recommendations</span></span>
             </div>
         </div>
     </header>
@@ -69,152 +84,330 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Expert Insulation Services<br><span>Tailored for You</span></h2>
-                <div class="title-underline"></div>
+                <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800;" data-i18n="services-title">Expert Insulation Services<br><span style="color: var(--color-mustard);">Tailored for You</span></h2>
+                <div class="title-underline" style="height: 4px; width: 60px; background-color: var(--color-mustard); margin: 0 auto;"></div>
             </div>
             <div class="grid-2col">
-                <div class="card service-card">
-                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
-                    <h3>High Pressure Spray Foam</h3>
-                    <p>Maximum coverage and extreme durability for large-scale and commercial projects.</p>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-attic-title">Attic Spray Foam Insulation</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-attic-desc">Help reduce heat transfer, improve comfort, and support better AC performance.</p>
                 </div>
-                <div class="card service-card">
-                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                    <h3>Low Pressure Spray Foam</h3>
-                    <p>Precision insulation for targeted areas, crawl spaces, and delicate structures.</p>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-garage-title">Garage & Bonus Room Insulation</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-garage-desc">Turn hot, uncomfortable spaces into more usable areas. Converting a garage or carport? We can help control heat before drywall finishes.</p>
                 </div>
-                <div class="card service-card">
-                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg></div>
-                    <h3>Fiberglass Installation</h3>
-                    <p>Classic, reliable, and cost-effective insulation solutions for any budget.</p>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-crawl-title">Crawl Space Insulation</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-crawl-desc">Help control moisture, air leaks, and humidity from below your home.</p>
                 </div>
-                <div class="card service-card">
-                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
-                    <h3>Insulation Removal Services</h3>
-                    <p>Safe, clean, and efficient removal of old, damaged, or ineffective insulation.</p>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M4 22V10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/><path d="M10 22V10"/><path d="M14 22V10"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-metal-title">Metal Building Spray Foam</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-metal-desc">Improve temperature control and reduce condensation in workshops, warehouses, and storage buildings.</p>
                 </div>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-new-title">New Construction & Remodels</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-new-desc">Get proper air sealing from the beginning of your project.</p>
+                </div>
+                <div class="card service-card" style="padding: 2.5rem; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <div class="card-icon" style="font-size: 2.5rem; color: var(--color-mustard); margin-bottom: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;" data-i18n="service-commercial-title">Small Commercial Spray Foam</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="service-commercial-desc">Energy-efficient insulation for offices, shops, warehouses, and buildouts.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero-btn-estimate">Request a Free Estimate</a>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="section bg-alt">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Why Upgrade to <span>Spray Foam?</span></h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="grid-4col">
-                <div class="benefit-item text-center">
-                    <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                    <h4>Maximize Energy Savings</h4>
-                    <p>Reduce your heating and cooling costs significantly.</p>
-                </div>
-                <div class="benefit-item text-center">
-                    <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
-                    <h4>Moisture & Mold Control</h4>
-                    <p>Create an airtight barrier to protect your structure from water damage.</p>
-                </div>
-                <div class="benefit-item text-center">
-                    <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
-                    <h4>Better Air Quality</h4>
-                    <p>Seal out dust, allergens, and outdoor pollutants.</p>
-                </div>
-                <div class="benefit-item text-center">
-                    <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-                    <h4>Long-Lasting Performance</h4>
-                    <p>Premium insulation that doesn't sag, settle, or degrade over time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us Section -->
-    <section id="why-us" class="section">
+    <!-- Jacksonville Climate Section -->
+    <section class="section" id="climate" style="background-color: var(--color-bg-card);">
         <div class="container">
             <div class="grid-2col" style="align-items: center;">
-                <div class="why-us-content">
-                    <h2 class="section-title">Jacksonville's Trusted<br><span>Insulation Experts</span></h2>
-                    <div class="title-underline" style="margin: 0 0 2rem 0;"></div>
-                    <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">We are a dedicated commercial and residential insulation company. We don't just insulate; we provide long-term comfort, structural integrity, and superior energy efficiency solutions.</p>
-                    <ul class="features-list">
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Fully Licensed and Insured</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Commercial & Residential Experts</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Top-Quality Materials</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Fast & Reliable Service</li>
-                    </ul>
+                <div class="climate-content">
+                    <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800;" data-i18n="climate-title">Made for <span>Jacksonville Weather</span></h2>
+                    <div class="title-underline" style="height: 4px; width: 60px; background-color: var(--color-mustard); margin: 0 0 2rem 0;"></div>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="climate-desc">Jacksonville homes face intense heat, high humidity, heavy rain, and moisture challenges throughout the year. Spray foam insulation helps create an air seal that can reduce drafts, improve comfort, and help your HVAC system work more efficiently.</p>
+                    <p style="font-weight: 600; color: var(--color-mustard); margin-bottom: 0.5rem;" data-i18n="climate-serving">Proudly serving:</p>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Jacksonville, St. Johns River area, Southside, Mandarin, Orange Park, Jacksonville Beach, Atlantic Beach, Neptune Beach, Ponte Vedra, St. Augustine, Riverside, Arlington.</p>
                 </div>
-                <div class="why-us-image card text-center" style="display: flex; flex-direction: column; justify-content: center; padding: 1rem;">
-                    <img src="why-us-quote.png" alt="For with God nothing shall be impossible - Luke 1:37" style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+                <div class="card text-center" style="display: flex; flex-direction: column; justify-content: center; padding: 3rem; background: var(--color-nav-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1.5rem auto;"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.94 13A5.96 5.96 0 0 0 12 11a5.96 5.96 0 0 0-3.94 2"/><path d="M8 15h.01"/><path d="M16 15h.01"/><path d="M12 15h.01"/><path d="M12 19h.01"/></svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;" data-i18n="climate-protect">Protect Your Space</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="climate-protect-desc">From Florida's extreme humidity and heat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800;" data-i18n="why-title">Why Choose <span>A&A Spray Foam?</span></h2>
+                <div class="title-underline" style="height: 4px; width: 60px; background-color: var(--color-mustard); margin: 0 auto;"></div>
+            </div>
+            <div class="grid-2col" style="align-items: center;">
+                <ul class="features-list" style="list-style: none; padding: 0;">
+                    <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 6 9 17l-5-5"/></svg> <div data-i18n="why-1"><strong style="color: #fff;">Clear Communication:</strong> <span style="color: var(--color-text-muted);">We explain the process before we start.</span></div></li>
+                    <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 6 9 17l-5-5"/></svg> <div data-i18n="why-2"><strong style="color: #fff;">Honest Recommendations:</strong> <span style="color: var(--color-text-muted);">We do not sell you something your property does not need.</span></div></li>
+                    <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 6 9 17l-5-5"/></svg> <div data-i18n="why-3"><strong style="color: #fff;">Clean Work:</strong> <span style="color: var(--color-text-muted);">We respect your home and prepare the area before installation.</span></div></li>
+                    <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 6 9 17l-5-5"/></svg> <div data-i18n="why-4"><strong style="color: #fff;">Local Service:</strong> <span style="color: var(--color-text-muted);">We serve Jacksonville and Northeast Florida with direct, personal attention.</span></div></li>
+                    <li style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 6 9 17l-5-5"/></svg> <div data-i18n="why-5"><strong style="color: #fff;">English & Spanish Support:</strong> <span style="color: var(--color-text-muted);">We make sure you understand your options clearly.</span></div></li>
+                </ul>
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem; background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24" fill="none" stroke="var(--color-mustard)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1.5rem auto;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;" data-i18n="why-bilingual">Bilingual Experts</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="why-bilingual-desc">We speak your language. Hablamos Español.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section" id="process" style="background-color: var(--color-bg-card);">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800;" data-i18n="process-title">Our Simple <span>4-Step Process</span></h2>
+                <div class="title-underline" style="height: 4px; width: 60px; background-color: var(--color-mustard); margin: 0 auto;"></div>
+            </div>
+            <div class="process-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="process-step text-center">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-mustard); color: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; margin: 0 auto 1.5rem auto;">1</div>
+                    <h3 data-i18n="step-1-title">Request Your Free Estimate</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="step-1-desc">Call us, text us, or send your project details.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-mustard); color: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; margin: 0 auto 1.5rem auto;">2</div>
+                    <h3 data-i18n="step-2-title">Project Review</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="step-2-desc">We look at the area and understand your goals.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-mustard); color: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; margin: 0 auto 1.5rem auto;">3</div>
+                    <h3 data-i18n="step-3-title">Foam Recommendation</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="step-3-desc">We explain whether open-cell or closed-cell makes more sense.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-mustard); color: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.5rem; margin: 0 auto 1.5rem auto;">4</div>
+                    <h3 data-i18n="step-4-title">Installation Day</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="step-4-desc">We prepare, spray, clean, and review the job with you.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://wa.me/19045125644" class="btn btn-primary" data-i18n="process-btn">Start Step 1: Text Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Pricing -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="grid-2col">
+                <!-- Open vs Closed Cell -->
+                <div class="card" style="padding: 3rem;">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.8rem;" data-i18n="edu-compare-title">Open-Cell vs Closed-Cell</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--color-mustard); font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="edu-open-title">Open-Cell Spray Foam</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="edu-open-desc">Best for interior walls, attics, and sound control.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);" data-i18n="edu-open-benefit"><strong>Main benefit:</strong> More affordable and great for air sealing.</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--color-mustard); font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="edu-closed-title">Closed-Cell Spray Foam</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="edu-closed-desc">Best for metal buildings, crawl spaces, moisture-prone areas.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);" data-i18n="edu-closed-benefit"><strong>Main benefit:</strong> Higher R-value, moisture resistance, and added strength.</p>
+                    </div>
+                    <div style="padding-top: 1.5rem; border-top: 1px solid var(--color-border-strong);">
+                        <p style="font-size: 0.95rem; font-style: italic; color: #fff;" data-i18n="edu-compare-note">Not sure which one you need? We will explain the difference during your free estimate.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Education -->
+                <div class="card" style="padding: 3rem;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;" data-i18n="edu-pricing-title">How is Pricing Determined?</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--color-text-muted);" data-i18n="edu-pricing-desc">We don't believe in hidden fees. The cost of your project depends on several factors:</p>
+                    <ul style="font-size: 0.95rem; color: #fff; padding-left: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
+                        <li style="list-style-type: disc;" data-i18n="price-factor-1">Size of the area (Square footage).</li>
+                        <li style="list-style-type: disc;" data-i18n="price-factor-2">Foam type: open-cell or closed-cell.</li>
+                        <li style="list-style-type: disc;" data-i18n="price-factor-3">Required thickness (R-value).</li>
+                        <li style="list-style-type: disc;" data-i18n="price-factor-4">Access difficulty & Ventilation.</li>
+                        <li style="list-style-type: disc;" data-i18n="price-factor-5">Existing insulation removal.</li>
+                        <li style="list-style-type: disc;" data-i18n="price-factor-6">New construction versus retrofit.</li>
+                    </ul>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: var(--radius-sm); border: 1px dashed var(--color-border-strong);">
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;" data-i18n="edu-ready-title">Not ready for an appointment?</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--color-text-muted);" data-i18n="edu-ready-desc">Send pictures of your attic, garage, crawl space, or metal building and we will guide you on what may be needed.</p>
+                        <a href="#contact" class="btn btn-primary-outline" style="width: 100%; text-align: center;" data-i18n="edu-ready-btn">Send Us Photos First</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section class="section" id="safety" style="background: var(--bg-card); border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="safety-title">Safety-Focused <span>Installation</span></h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem auto; color: var(--color-text-muted);" data-i18n="safety-desc">We follow proper preparation, ventilation, and cleanup practices so every project is handled carefully from start to finish.</p>
+            <div class="grid-4col">
+                <div class="process-step text-center">
+                    <div class="card-icon" style="font-size: 2rem; color: var(--color-mustard); margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                    <h4 data-i18n="safety-1-title">Preparation</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="safety-1-desc">Thorough work area preparation to protect your property.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="card-icon" style="font-size: 2rem; color: var(--color-mustard); margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+                    <h4 data-i18n="safety-2-title">Ventilation</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="safety-2-desc">Strict ventilation awareness and manufacturer guidelines.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="card-icon" style="font-size: 2rem; color: var(--color-mustard); margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 13 2 2 4-4"/></svg></div>
+                    <h4 data-i18n="safety-3-title">Protection</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="safety-3-desc">Proper PPE (Personal Protective Equipment) for all installers.</p>
+                </div>
+                <div class="process-step text-center">
+                    <div class="card-icon" style="font-size: 2rem; color: var(--color-mustard); margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg></div>
+                    <h4 data-i18n="safety-4-title">Clean Jobsite</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="safety-4-desc">We leave the site clean and conduct a final review with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="gallery-title">Real Work. <span>Real Results.</span></h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 3rem;">
+                <!-- Placeholder images -->
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Before/After Attic]</div>
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Garage Project]</div>
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Metal Building]</div>
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Crawl Space]</div>
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[New Build]</div>
+                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Commercial]</div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary" data-i18n="gallery-btn">Book Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq" style="background: var(--bg-card);">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="faq-title">Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container" style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <div class="card" style="margin-bottom: 1rem; padding: 2rem; border-left: 4px solid var(--color-mustard);">
+                    <h4 style="margin-bottom: 0.8rem; font-size: 1.1rem;" data-i18n="faq-q-1">Is spray foam good for Jacksonville homes?</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;" data-i18n="faq-a-1">Yes. Spray foam can help reduce air leaks, improve comfort, and support moisture control, which is important in Florida’s hot and humid climate.</p>
+                </div>
+                <div class="card" style="margin-bottom: 1rem; padding: 2rem; border-left: 4px solid var(--color-mustard);">
+                    <h4 style="margin-bottom: 0.8rem; font-size: 1.1rem;" data-i18n="faq-q-2">How much does it cost?</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;" data-i18n="faq-a-2">The cost varies based on square footage and foam type. We provide free estimates to give you an accurate price for your project.</p>
+                </div>
+                <div class="card" style="margin-bottom: 1rem; padding: 2rem; border-left: 4px solid var(--color-mustard);">
+                    <h4 style="margin-bottom: 0.8rem; font-size: 1.1rem;" data-i18n="faq-q-3">Do you speak Spanish?</h4>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;" data-i18n="faq-a-3">Yes. We communicate in English and Spanish.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-alt">
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Ready to Insulate<br><span>Your Property?</span></h2>
-                <div class="title-underline"></div>
-                <p style="color: var(--color-text-muted); margin-top: 1rem;">Get in touch with A&A Spray Foam Inc. today for a free consultation and estimate.</p>
+                <h2 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800;">Ready to Insulate <span>Your Property?</span></h2>
+                <div class="title-underline" style="height: 4px; width: 60px; background-color: var(--color-mustard); margin: 0 auto;"></div>
+                <p style="color: var(--color-text-muted); margin-top: 1.5rem; font-size: 1.1rem;">Get in touch with A&A Spray Foam Inc. today for a free consultation and estimate.</p>
             </div>
             
-            <div class="contact-wrapper">
-                <div class="contact-info card">
-                    <h3>Contact Information</h3>
-                    <p style="margin-bottom: 2rem; color: var(--color-text-muted);">Serving Jacksonville, FL and surrounding areas.</p>
+            <div class="contact-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                <div class="contact-info card" style="padding: 3rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.5rem;" data-i18n="contact-info-title">Contact Information</h3>
+                    <p style="margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="contact-info-desc">Serving Jacksonville, FL and surrounding areas.</p>
                     
-                    <div class="contact-detail">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                    <div class="contact-detail" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="icon" style="font-size: 1.5rem; color: var(--color-mustard);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
                         <div>
-                            <strong>Service Area</strong>
-                            <p>Jacksonville, Florida</p>
+                            <strong style="color: #fff; font-size: 1.1rem;">Service Area</strong>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Jacksonville, Florida</p>
                         </div>
                     </div>
-                    <div class="contact-detail">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                    <div class="contact-detail" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="icon" style="font-size: 1.5rem; color: var(--color-mustard);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
                         <div>
-                            <strong>Phone</strong>
-                            <p><a href="tel:+19045125644">(904) 512-5644</a></p>
+                            <strong style="color: #fff; font-size: 1.1rem;">Phone</strong>
+                            <p><a href="tel:+19045125644" style="color: var(--color-text-muted); font-size: 0.95rem;">(904) 512-5644</a></p>
                         </div>
                     </div>
-                    <div class="contact-detail">
-                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                    <div class="contact-detail" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="icon" style="font-size: 1.5rem; color: var(--color-mustard);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
                         <div>
-                            <strong>Email</strong>
-                            <p><a href="mailto:info@aasprayfoam.com">info@aasprayfoam.com</a></p>
+                            <strong style="color: #fff; font-size: 1.1rem;">Email</strong>
+                            <p><a href="mailto:info@aasprayfoam.com" style="color: var(--color-text-muted); font-size: 0.95rem;">info@aasprayfoam.com</a></p>
                         </div>
                     </div>
 
                     <div class="action-buttons" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-                        <a href="https://wa.me/19045125644" class="btn btn-primary" style="background-color: #25D366; border-color: #25D366; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Chat on WhatsApp</a>
-                        <a href="sms:+19045125644" class="btn btn-secondary">Send SMS</a>
+                        <a href="https://wa.me/19045125644" class="btn btn-primary" style="background-color: #25D366; border-color: #25D366; color: white;" data-i18n="contact-whatsapp">Chat on WhatsApp</a>
+                        <a href="sms:+19045125644" class="btn btn-secondary" data-i18n="contact-sms">Send SMS</a>
                     </div>
                 </div>
 
-                <div class="contact-form card">
-                    <h3>Send us a Message</h3>
-                    <form action="#" method="POST" id="lead-form" style="margin-top: 1.5rem;">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="contact-form card" style="padding: 3rem;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;" data-i18n="form-title">Request Free Estimate</h3>
+                    <p style="margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem;" data-i18n="form-desc">Or send us photos of your project to get guided advice.</p>
+                    <form action="#" method="POST" id="lead-form" enctype="multipart/form-data">
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;" data-i18n="label-name">Name</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: #fff;">
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
+                        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                            <div>
+                                <label for="phone" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Phone</label>
+                                <input type="tel" id="phone" name="phone" required style="width:100%; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--color-border-strong); background:var(--color-input-bg); color:var(--color-text-main);">
+                            </div>
+                            <div>
+                                <label for="email" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Email</label>
+                                <input type="email" id="email" name="email" style="width:100%; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--color-border-strong); background:var(--color-input-bg); color:var(--color-text-main);">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="High Pressure">High Pressure Spray Foam</option>
-                                <option value="Low Pressure">Low Pressure Spray Foam</option>
-                                <option value="Fiberglass">Fiberglass Installation</option>
-                                <option value="Removal">Insulation Removal</option>
-                                <option value="Other">Other</option>
-                            </select>
+                        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+                            <div>
+                                <label for="service" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Project Type</label>
+                                <select id="service" name="service" style="width:100%; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--color-border-strong); background:var(--color-input-bg); color:var(--color-text-main);">
+                                    <option value="Attic">Attic</option>
+                                    <option value="Garage">Garage</option>
+                                    <option value="Crawl Space">Crawl Space</option>
+                                    <option value="Metal Building">Metal Building</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="sqft" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Approx. Sq Ft</label>
+                                <input type="text" id="sqft" name="sqft" placeholder="e.g. 1500" style="width:100%; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--color-border-strong); background:var(--color-input-bg); color:var(--color-text-main);">
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Request Free Estimate</button>
+                        <div class="form-group" style="margin-bottom: 1.2rem;">
+                            <label for="city" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">City / Area</label>
+                            <input type="text" id="city" name="city" placeholder="Jacksonville, Orange Park, etc." required style="width:100%; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--color-border-strong); background:var(--color-input-bg); color:var(--color-text-main);">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;" data-i18n="label-message">Message</label>
+                            <textarea id="message" name="message" rows="4" style="width: 100%; padding: 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: #fff;"></textarea>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label for="photos" style="display: block; margin-bottom: 0.5rem; font-weight: 600;" data-i18n="label-photos">Upload Photos (Optional)</label>
+                            <input type="file" id="photos" name="photos" multiple style="width: 100%; padding: 0.8rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: #fff;">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form-btn">Send Request</button>
                     </form>
                 </div>
             </div>
@@ -228,6 +421,7 @@
         </div>
     </footer>
 
+    <script src="js/lang.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
