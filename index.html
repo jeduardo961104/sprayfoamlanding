@@ -283,8 +283,22 @@
         <div class="container">
             <h2 class="section-title text-center" data-i18n="gallery-title">Real Work. <span>Real Results.</span></h2>
             <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 3rem;">
-                <!-- Placeholder images -->
-                <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Before/After Attic]</div>
+                <!-- Interactive Before/After Slider -->
+                <div class="gallery-item comparison-slider" style="aspect-ratio: 4/3; background: #222; border-radius: var(--radius-sm); position: relative; overflow: hidden; border: 1px solid var(--color-border);">
+                    <!-- Placeholder "Before" image (dirty attic/wall) -->
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" alt="Before" class="before-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <!-- Placeholder "After" image (clean spray foam) -->
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="After" class="after-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+                    
+                    <input type="range" min="0" max="100" value="50" class="comparison-input" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 10;">
+                    <div class="slider-handle" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #fff; transform: translateX(-50%); pointer-events: none; z-index: 5; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/><path d="m9 18 6-6-6-6"/></svg>
+                        </div>
+                    </div>
+                    <div style="position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.6); color:#fff; padding:4px 8px; border-radius:4px; font-size:0.75rem; font-weight:600; pointer-events:none; z-index: 5;" data-i18n="gallery-before">Before</div>
+                    <div style="position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.6); color:#fff; padding:4px 8px; border-radius:4px; font-size:0.75rem; font-weight:600; pointer-events:none; z-index: 5;" data-i18n="gallery-after">After</div>
+                </div>
                 <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Garage Project]</div>
                 <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Metal Building]</div>
                 <div class="gallery-item" style="aspect-ratio: 4/3; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 700;">[Crawl Space]</div>

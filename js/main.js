@@ -170,4 +170,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 9. Comparison Slider Logic
+    const sliders = document.querySelectorAll('.comparison-slider');
+    sliders.forEach(slider => {
+        const input = slider.querySelector('.comparison-input');
+        const afterImage = slider.querySelector('.after-image');
+        const handle = slider.querySelector('.slider-handle');
+
+        if(input && afterImage && handle) {
+            input.addEventListener('input', (e) => {
+                const value = e.target.value;
+                // Update the clip-path of the after image
+                afterImage.style.clipPath = `polygon(${value}% 0, 100% 0, 100% 100%, ${value}% 100%)`;
+                // Move the handle
+                handle.style.left = `${value}%`;
+            });
+        }
+    });
+
 });

@@ -108,7 +108,9 @@ const translations = {
         "faq-q-2": "How much does it cost?",
         "faq-a-2": "The cost varies based on square footage and foam type. We provide free estimates to give you an accurate price for your project.",
         "faq-q-3": "Do you speak Spanish?",
-        "faq-a-3": "Yes. We communicate in English and Spanish."
+        "faq-a-3": "Yes. We communicate in English and Spanish.",
+        "gallery-before": "Before",
+        "gallery-after": "After"
     },
     "es": {
         "nav-services": "Servicios",
@@ -219,6 +221,8 @@ const translations = {
         "faq-q-2": "¿Cuánto cuesta?",
         "faq-a-2": "El costo varía según los pies cuadrados y el tipo de espuma. Ofrecemos presupuestos gratuitos para darte un precio exacto.",
         "faq-q-3": "¿Hablan español?",
-        "faq-a-3": "Sí. Nos comunicamos tanto en inglés como en español."
+        "faq-a-3": "Sí. Nos comunicamos tanto en inglés como en español.",
+        "gallery-before": "Antes",
+        "gallery-after": "Después"
     }
 };
